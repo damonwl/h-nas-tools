@@ -551,7 +551,7 @@ class TorrentSpider(feapder.AirSpider):
             self.Getpubdate(torrent)
             self.Getelapsed_date(torrent)
             self.Getlabels(torrent)
-            #判断字符串"mteam"是否在self.indexerid中
+            # 判断字符串"mteam"是否在self.indexerid中
             if "mteam" in self.indexerid:
                 self.torrents_info['enclosure'] = re.sub('details', 'download', self.torrents_info['page_url'][0:-6])
         except Exception as err:
